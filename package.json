@@ -1,0 +1,26 @@
+{
+  "name": "html2gif",
+  "version": "0.0.1",
+  "description": "Create gif from html",
+  "main": "Gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eirikb/html2gif"
+  },
+  "keywords": [
+    "gif"
+  ],
+  "author": "eirikb <eirikb@eirikb.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eirikb/html2gif/issues"
+  },
+  "homepage": "https://github.com/eirikb/html2gif",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-connect": "^2.0.5",
+    "gulp-mustache": "^0.3.1",
+    "gulp-uglify": "^0.3.0"
+  }
+}

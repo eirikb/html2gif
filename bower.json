@@ -1,0 +1,17 @@
+{
+  "name": "html2gif",
+  "version": "0.0.1",
+  "homepage": "https://github.com/eirikb/html2gif",
+  "authors": [
+    "eirikb <eirikb@eirikb.no>"
+  ],
+  "description": "Create gif from html",
+  "keywords": [
+    "gif"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "html2canvas": "~0.4.1",
+    "gif.js": "~0.1.6"
+  }
+}

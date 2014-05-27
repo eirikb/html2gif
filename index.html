@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>html2gif</title>
+
+        <style>
+            h1 {
+                -moz-animation-duration: 4000ms;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-name: spin;
+                -moz-animation-timing-function: linear;
+                -ms-animation-duration: 4000ms;
+                -ms-animation-iteration-count: infinite;
+                -ms-animation-name: spin;
+                -ms-animation-timing-function: linear;
+                -webkit-animation-duration: 4000ms;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-name: spin;
+                -webkit-animation-timing-function: linear;
+                animation-duration: 4000ms;
+                animation-iteration-count: infinite;
+                animation-name: spin;
+                animation-timing-function: linear;
+    
+                background: #f00;
+                height: 150px;
+                margin: 30px;
+                width: 150px;
+            }
+
+            @-ms-keyframes spin {
+                from { -ms-transform: rotate(0); }
+                to { -ms-transform: rotate(360deg); }
+            }
+
+            @-moz-keyframes spin {
+                from { -moz-transform: rotate(0); }
+                to { -moz-transform: rotate(360deg); }
+            }
+
+            @-webkit-keyframes spin {
+                from { -webkit-transform: rotate(0); }
+                to { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+                from { transform: rotate(0); }
+                to { transform: rotate(360deg); }
+            }
+        </style>
+
+        <script src="dist/html2gif.min.js"></script>
+        <script>
+            window.onload = function() {
+                var html2Gif = new Html2Gif(document.body);
+                html2Gif.oncomplete = function(dataUri) {
+                    document.querySelector('#gif').src = dataUri;
+                };
+                html2Gif.start(200, 10);
+            };
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <h1>html2gif</h1>
+            <img id="gif">
+        </div>
+    </body>
+</html>
