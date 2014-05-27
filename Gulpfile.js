@@ -23,7 +23,7 @@ gulp.task('worker', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('html2gif', function() {
+gulp.task('html2gif', ['worker'], function() {
   return gulp.src('template/html2gif.mustache')
     .pipe(mustache({
       workerSrc: JSON.stringify(fs.readFileSync('dist/worker.js').toString()),
